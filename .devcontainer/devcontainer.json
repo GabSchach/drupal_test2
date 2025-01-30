@@ -1,0 +1,21 @@
+{
+    "name": "Drupal in Codespaces",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "forwardPorts": [8080, 3306],
+    "postCreateCommand": "bash .devcontainer/setup.sh",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash"
+            },
+            "extensions": [
+                "bmewburn.vscode-intelephense-client",
+                "ms-azuretools.vscode-docker",
+                "ms-vscode-remote.remote-containers"
+            ]
+        }
+    },
+    "remoteUser": "root"
+}
